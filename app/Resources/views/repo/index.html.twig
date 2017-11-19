@@ -1,0 +1,13 @@
+{% extends('base.html.twig') %}
+
+{% block body %}
+
+    <div class="col-md-3">
+        {#{% include 'repo/profile.html.twig' %}#}
+        {{ render(controller('AppBundle:Repo:profile', {'username': username})) }}
+    </div>
+    <div class="col-md-9">
+        {{ render(controller('AppBundle:Repo:repos', {'username': username})) }}
+    </div>
+
+{% endblock %}
